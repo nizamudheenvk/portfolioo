@@ -38,7 +38,7 @@ function App() {
     <>
 
 
-  <SplashCursor style={{display:'none'}}/>
+  {/* <SplashCursor style={{display:'none'}}/> */}
       <div
     
         className="bg-black d-flex justify-content-center align-items-center"
