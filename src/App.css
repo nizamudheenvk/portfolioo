@@ -1,0 +1,226 @@
+.texst{
+  font-size: 50px !important;
+  font-weight: bold;
+}
+.textt{
+  font-size: 50px;
+  text-align: center;
+}
+.blurrr{
+color: #a7a7a7;
+
+}
+canvas {
+  pointer-events: none;
+}
+canvas {
+  pointer-events: none !important;
+  z-index: -1 !important;
+}
+.projects{
+  border: solid;
+  border-radius: 0px 0px 10px 10px  red;
+}
+
+.skill-icon {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: #111;
+  border: 2px solid transparent;
+  padding: 1rem;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.skill-card img {
+  max-width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-card p {
+  margin: 0;
+  font-weight: 500;
+  color: #fff;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 30px #00ffd5;
+  border-color: #00ffd5;
+}
+
+.skill-card:hover img {
+  transform: rotate(5deg) scale(1.1);
+}
+
+
+
+
+.project-box {
+  background: #111;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  height: 100%;
+}
+
+.project-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.project-box h5 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.project-box a {
+  text-decoration: none;
+  color: #00ffd5;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.project-box:hover {
+  transform: translateY(-10px);
+  border-color: #00ffd5;
+  box-shadow: 0 0 25px #00ffd5;
+}
+
+.project-box:hover img {
+  transform: scale(1.05);
+}
+
+.project-box a:hover {
+  color: white;
+}
+
+
+
+
+
+.edu-card {
+  background: #111;
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.edu-card:hover {
+  border-color: #00ffd5;
+  box-shadow: 0 0 25px #00ffd5;
+  transform: translateY(-5px) scale(1.02);
+}
+
+.edu-card h5 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.edu-card p {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.edu-card button:hover {
+  background-color: #00ffd5;
+  color: black;
+  border-color: #00ffd5;
+}
+
+
+
+.contact-block {
+  padding: 2rem;
+  background: linear-gradient(145deg, #111111, #1a1a1a);
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #222;
+  box-shadow: 0 0 15px rgba(0, 255, 213, 0.05);
+}
+
+.contact-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px #00ffd5;
+}
+
+.contact-block h6 {
+  color: #00ffd5;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-block p,
+.contact-block a {
+  color: #aaa;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.text-contact {
+  color: #00ffd5;
+}
+
+
+.education-card {
+  background: linear-gradient(145deg, #111111, #1a1a1a);
+  border-radius: 20px;
+  border: 1px solid #222;
+  box-shadow: 0 0 25px rgba(0, 255, 213, 0.05);
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  box-shadow: 0 0 40px #00ffd5;
+  transform: translateY(-5px);
+}
+
+.download-grade {
+  border: 2px solid #00ffd5;
+  color: #00ffd5;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.download-grade:hover {
+  background-color: #00ffd5;
+  color: black;
+  box-shadow: 0 0 15px #00ffd5;
+}
+
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+

@@ -1,0 +1,12 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.profile-card {
+  width: 400px; /* or 500px, adjust as needed */
+  max-width: 90%;
+}
+.projects{
+  border-radius: 0px 0px 10px 10px red;
+}
