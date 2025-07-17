@@ -294,7 +294,7 @@ function App() {
         <div className="contact-block flex-fill d-flex flex-column justify-content-center h-100 w-100">
           <i className="fa-solid fa-phone fa-2x mb-3 text-contact"></i>
           <h6>Phone</h6>
-          <p>+91 98955811583</p>
+          <p>+91 9895581583</p>
         </div>
       </div>
 
