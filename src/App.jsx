@@ -61,7 +61,7 @@ function App() {
 
 
           <ShinyText
-            text=" Muhammad Nizamudheen VK"
+            text=" Muhammad Nishamudheen VK"
             
             speed={3}
             // disabled={false}
