@@ -27,9 +27,48 @@ import tailwind from './assets/tailwind.png'
 import bootstrap from './assets/bootstrap.png'
 import api from './assets/api.png'
 import nizam from'./assets/nizam.png'
+import emailjs from '@emailjs/browser'
+import { useRef } from 'react';
+import { Modal, Button } from "react-bootstrap";
+import {  useState } from "react";
+
+
 
 
 function App() {
+
+
+  const [showModal, setShowModal] = useState(false);
+const [modalMessage, setModalMessage] = useState("");
+
+
+  const form = useRef()
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(
+      "service_oad0rtb",
+      "template_zynpxna",
+      form.current,
+      "evkkb9DKNhAiMoqyZ"
+    )
+    .then((result) => {
+      console.log("✅ Email sent:", result.text);
+      setModalMessage("Your message was sent successfully! ");
+      setShowModal(true);
+      e.target.reset();
+    })
+    .catch((error) => {
+      console.error("❌ Email send error:", error.text);
+      setModalMessage("Failed to send your message. Please try again later.");
+      setShowModal(true);
+    });
+};
+
+
+
+
 
   const handleAnimationComplete = () => {
   console.log('Animation completed!');
@@ -38,7 +77,7 @@ function App() {
     <>
 
 
-  {/* <SplashCursor style={{display:'none'}}/> */}
+  {/* <SplashCursor /> */}
       <div
     
         className="bg-black d-flex justify-content-center align-items-center"
@@ -364,12 +403,193 @@ function App() {
     </div>
   </div>
 
+<form ref={form} onSubmit={sendEmail}>
+<div
+  className="p-5 rounded-4 text-light text-center mt-5"
+  style={{
+    backgroundColor: "#0b0b0b",
+    border: "1px solid #00fff5",
+    boxShadow: "0 0 25px rgba(0, 255, 245, 0.3)",
+    maxWidth: "700px",
+    margin: "0 auto",
+  }}
+>
+ <div className="text-center mb-5">
+    <ShinyText
+      text="GET IN TOUCH"
+      speed={3}
+      className="text-center texst"
+      style={{ fontSize: '80px' }}
+    />
+  </div>
+
+  <style>
+    {`
+      ::placeholder {
+        color: rgba(255, 255, 255, 0.9) !important;
+        opacity: 1;
+      }
+      input:focus::placeholder,
+      textarea:focus::placeholder {
+        color: rgba(255, 255, 255, 0.7) !important;
+      }
+    `}
+  </style>
+
+  {/* Username */}
+  <div className="mb-3">
+    <input
+      type="text"
+      name='from_name'
+      className="form-control text-center"
+      placeholder="Username"
+      style={{
+        backgroundColor: "transparent",
+        border: "1.5px solid #00fff5",
+        color: "white",
+        borderRadius: "12px",
+        padding: "14px",
+        fontSize: "16px",
+        boxShadow: "0 0 18px rgba(0, 255, 245, 0.25)",
+        transition: "0.3s",
+      }}
+      onFocus={(e) =>
+        (e.target.style.boxShadow = "0 0 28px rgba(0, 255, 245, 0.7)")
+      }
+      onBlur={(e) =>
+        (e.target.style.boxShadow = "0 0 18px rgba(0, 255, 245, 0.25)")
+      }
+    />
+  </div>
+
+  {/* Email */}
+  <div className="mb-3">
+    <input
+      type="email"
+      name='from_email'
+      className="form-control text-center"
+      placeholder="Email"
+      required
+      style={{
+        backgroundColor: "transparent",
+        border: "1.5px solid #00fff5",
+        color: "white",
+        borderRadius: "12px",
+        padding: "14px",
+        fontSize: "16px",
+        boxShadow: "0 0 18px rgba(0, 255, 245, 0.25)",
+        transition: "0.3s",
+      }}
+      onFocus={(e) =>
+        (e.target.style.boxShadow = "0 0 28px rgba(0, 255, 245, 0.7)")
+      }
+      onBlur={(e) =>
+        (e.target.style.boxShadow = "0 0 18px rgba(0, 255, 245, 0.25)")
+      }
+    />
+  </div>
+
+  {/* Message */}
+  <div className="mb-3">
+    <textarea
+      rows="4"
+      className="form-control text-center"
+      name='message'
+      placeholder="Message"
+      style={{
+        backgroundColor: "transparent",
+        border: "1.5px solid #00fff5",
+        color: "white",
+        borderRadius: "12px",
+        padding: "14px",
+        fontSize: "16px",
+        boxShadow: "0 0 18px rgba(0, 255, 245, 0.25)",
+        transition: "0.3s",
+      }}
+      onFocus={(e) =>
+        (e.target.style.boxShadow = "0 0 28px rgba(0, 255, 245, 0.7)")
+      }
+      onBlur={(e) =>
+        (e.target.style.boxShadow = "0 0 18px rgba(0, 255, 245, 0.25)")
+      }
+    ></textarea>
+  </div>
+
+  {/* Submit Button */}
+  <button
+    className="btn w-50 mt-3"
+    style={{
+      border: "1.5px solid #00fff5",
+      color: "#00fff5",
+      backgroundColor: "transparent",
+      borderRadius: "10px",
+      padding: "10px 20px",
+      fontWeight: "500",
+      fontSize: "16px",
+      boxShadow: "0 0 25px rgba(0, 255, 245, 0.45)",
+      transition: "all 0.3s ease",
+    }}
+    onMouseOver={(e) => {
+      e.target.style.backgroundColor = "#00fff5";
+      e.target.style.color = "#000";
+      e.target.style.boxShadow = "0 0 35px rgba(0, 255, 245, 0.9)";
+    }}
+    onMouseOut={(e) => {
+      e.target.style.backgroundColor = "transparent";
+      e.target.style.color = "#00fff5";
+      e.target.style.boxShadow = "0 0 25px rgba(0, 255, 245, 0.45)";
+    }}
+  >
+    Submit
+  </button>
+</div>
+</form>
+
+
 
   
 </div>
 
 
-
+<Modal
+  show={showModal}
+  onHide={() => setShowModal(false)}
+  centered
+  backdrop="static"
+  keyboard={false}
+>
+  <div
+    style={{
+      backgroundColor: "#0b0b0b",
+      color: "#00fff5",
+      border: "1px solid #00fff5",
+      borderRadius: "15px",
+      boxShadow: "0 0 25px rgba(0, 255, 245, 0.6)",
+    }}
+  >
+    <Modal.Header closeButton className="border-0">
+      <Modal.Title className="w-100 text-center">
+         Message Status
+      </Modal.Title>
+    </Modal.Header>
+    <Modal.Body className="text-center">
+      <p style={{ fontSize: "18px" }}>{modalMessage}</p>
+    </Modal.Body>
+    <Modal.Footer className="border-0 d-flex justify-content-center">
+      <Button
+        variant="outline-info"
+        onClick={() => setShowModal(false)}
+        className="px-4 py-2"
+        style={{
+          borderRadius: "10px",
+          boxShadow: "0 0 20px rgba(0, 255, 245, 0.5)",
+        }}
+      >
+        Close
+      </Button>
+    </Modal.Footer>
+  </div>
+</Modal>
 
 
 
