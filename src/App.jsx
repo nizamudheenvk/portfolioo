@@ -77,7 +77,7 @@ const sendEmail = (e) => {
     <>
 
 
-  {/* <SplashCursor /> */}
+  <SplashCursor />
       <div
     
         className="bg-black d-flex justify-content-center align-items-center"
