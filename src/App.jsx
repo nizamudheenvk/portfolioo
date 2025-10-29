@@ -25,6 +25,7 @@ import interest from'./assets/interest.png'
 import python from './assets/python.png'
 import tailwind from './assets/tailwind.png'
 import bootstrap from './assets/bootstrap.png'
+import amazon from './assets/amazon.png'
 import api from './assets/api.png'
 import nizam from'./assets/nizam.png'
 import emailjs from '@emailjs/browser'
@@ -257,9 +258,22 @@ const sendEmail = (e) => {
 
 
 
+
+ <div className="col-md-4">
+        <div className="project-box">
+          <img src={amazon} alt="Interest Calculator" />
+          <h5>Amazon Clone</h5>
+          <a href="https://penoft-z8sy.vercel.app/" target="_blank" rel="noopener noreferrer">
+            View Project <i className="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
+
+
 {/* educationsl */}
 {/* ======= Beautiful Education Section ======= */}
 {/* ======= Styled Education Section (Same Format) ======= */}
