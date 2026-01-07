@@ -101,7 +101,7 @@ const sendEmail = (e) => {
 
 
           <ShinyText
-            text=" Muhammad Nishamudheen VK"
+            text=" Muhammad Nizamudheen"
             
             speed={3}
             // disabled={false}
